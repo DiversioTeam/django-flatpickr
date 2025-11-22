@@ -25,39 +25,39 @@ class ThemeEnum(str, Enum):
 class FlatpickrOptions(BaseModel, extra=Extra.allow):
     """Flatpickr options to create flatpickr instance."""
 
-    allowInput: Optional[bool]
-    allowInvalidPreload: Optional[bool]
-    altFormat: Optional[str]
+    allowInput: Optional[bool] = None
+    allowInvalidPreload: Optional[bool] = None
+    altFormat: Optional[str] = None
     altInput: bool = True
-    altInputClass: Optional[str]
-    ariaDateFormat: Optional[str]
-    clickOpens: Optional[bool]
-    dateFormat: Optional[str]
-    defaultDate: Optional[str]
-    defaultHour: Optional[int] = Field(ge=0, le=23)
-    defaultMinute: Optional[int] = Field(ge=0, le=59)
-    disable: Optional[List[str]]
-    disableMobile: Optional[bool]
-    enable: Optional[List[str]]
-    enableSeconds: Optional[bool]
-    enableTime: Optional[bool]
-    hourIncrement: Optional[int] = Field(ge=1, le=12)
-    inline: Optional[bool]
-    locale: Optional[str]
-    maxDate: Optional[str]
-    minDate: Optional[str]
-    minuteIncrement: Optional[int] = Field(ge=0, le=59)
-    mode: Optional[str]
-    monthSelectorType: Optional[str]
-    nextArrow: Optional[str]
-    noCalendar: Optional[bool]
-    position: Optional[str]
-    prevArrow: Optional[str]
-    shorthandCurrentMonth: Optional[bool]
-    showMonths: Optional[int] = Field(ge=1, le=12)
-    static: Optional[bool]
-    time_24hr: Optional[bool]
-    weekNumbers: Optional[bool]
+    altInputClass: Optional[str] = None
+    ariaDateFormat: Optional[str] = None
+    clickOpens: Optional[bool] = None
+    dateFormat: Optional[str] = None
+    defaultDate: Optional[str] = None
+    defaultHour: Optional[int] = Field(default=None, ge=0, le=23)
+    defaultMinute: Optional[int] = Field(default=None, ge=0, le=59)
+    disable: Optional[List[str]] = None
+    disableMobile: Optional[bool] = None
+    enable: Optional[List[str]] = None
+    enableSeconds: Optional[bool] = None
+    enableTime: Optional[bool] = None
+    hourIncrement: Optional[int] = Field(default=None, ge=1, le=12)
+    inline: Optional[bool] = None
+    locale: Optional[str] = None
+    maxDate: Optional[str] = None
+    minDate: Optional[str] = None
+    minuteIncrement: Optional[int] = Field(default=None, ge=0, le=59)
+    mode: Optional[str] = None
+    monthSelectorType: Optional[str] = None
+    nextArrow: Optional[str] = None
+    noCalendar: Optional[bool] = None
+    position: Optional[str] = None
+    prevArrow: Optional[str] = None
+    shorthandCurrentMonth: Optional[bool] = None
+    showMonths: Optional[int] = Field(default=None, ge=1, le=12)
+    static: Optional[bool] = None
+    time_24hr: Optional[bool] = None
+    weekNumbers: Optional[bool] = None
     wrap: bool = True
 
     @validator("mode")
