@@ -1,9 +1,6 @@
 from typing import Any, Dict, Optional
 
-try:
-    from pydantic.v1 import BaseModel, Field
-except ModuleNotFoundError:  # pragma: no cover
-    from pydantic import BaseModel, Field  # type: ignore
+from pydantic import BaseModel, Field
 
 from .schemas import FlatpickrOptions
 

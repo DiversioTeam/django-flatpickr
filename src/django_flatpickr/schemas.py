@@ -3,10 +3,7 @@
 from enum import Enum
 from typing import Any, Dict, List, NoReturn, Optional
 
-try:
-    from pydantic.v1 import BaseModel, Extra, Field, validator
-except ModuleNotFoundError:  # pragma: no cover
-    from pydantic import BaseModel, Extra, Field, validator  # type: ignore
+from pydantic import BaseModel, Extra, Field, validator
 
 from typing_extensions import TypeAlias
 
